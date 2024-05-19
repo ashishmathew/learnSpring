@@ -75,3 +75,27 @@ Spring projects for Enterprise solutions
 - Spring Security
 - Spring Mobile
 - Spring Android
+
+Decoupling components : 
+ - use interfaces to make your code loosely coupled
+ - inject dependencies through a constructor
+
+ Beans (The instances or objects that spring manages)
+Dependencies
+Location of the beans
+
+@Component (which are the beans)
+@Autowired (manage dependency between them)
+@ComponentScan (Location of the beans)
+
+@SpringBootApplication = @Configuration + @EnableAutoConfiguration + @ComponentScan
+
+steps when we run the application :
+Loading source class = Spring tries find anything with @Component annotation
+Identified Candidate component class
+Creating shared instance of singleton bean
+
+
+Autowiring by type @Primary when there are more than one components to inject dependency
+Autowiring by name - reference name should be the same as the dependency class
+if you apply both the approaches at the same time, @Primary takes precendence
